@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-VSTSRepository
+# New-VSTSRepository
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSRepository -Instance <Object> [-Name <Object>] [-Version <Object>]
+New-VSTSRepository [-Instance] <Object> [-Name] <Object> [[-Version] <Object>] [-RepositoryName] <Object>
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -52,10 +52,25 @@ Type: Object
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
+Required: True
+Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RepositoryName
+{{Fill RepositoryName Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 3
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -68,7 +83,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -76,7 +91,8 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### None
+### System.Object
+
 
 ## OUTPUTS
 

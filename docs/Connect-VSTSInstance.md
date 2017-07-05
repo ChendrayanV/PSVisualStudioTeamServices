@@ -7,12 +7,12 @@ schema: 2.0.0
 # Connect-VSTSInstance
 
 ## SYNOPSIS
-A PowerShell function to connect and authenticate Visual Studio Team Service using personal access token. 
+{{Fill in the Synopsis}}
 
 ## SYNTAX
 
 ```
-Connect-VSTSInstance
+Connect-VSTSInstance -Token <String>
 ```
 
 ## DESCRIPTION
@@ -29,10 +29,24 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -Token
+{{Fill Token Description}}
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 

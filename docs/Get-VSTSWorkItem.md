@@ -33,7 +33,6 @@ PS C:\> {{ Add example code here }}
 
 ### None
 
-
 ## OUTPUTS
 
 ### System.Object
