@@ -6,6 +6,7 @@
 ## Projects and Teams
 
 * [Team Projects](projects-and-teams/projects.md)
+  * 
 
 ## Git
 
