@@ -11,9 +11,9 @@ Follow the steps beneath to create a personal access token
 3. In the right pane click Personal access tokens and choose add. 
 4. Name your _**token**_ and select the _**time span.**_
 
-> Do not share the Personal Access Token with anyone. 
+> Do not share the Personal Access Token with anyone.
 >
-> Choose the time span as 90 days. 
+> Choose the time span as 90 days.
 >
 > Revoke the personal access token ID if you find any security issues.
 
@@ -36,19 +36,15 @@ function Connect-VSTSInstance
 }
 ```
 
-Now, we get the 52 characters length of base64 string which will be used for authentication. In the personal access token method the user name can be empty for an example look at the snippet below which use only **$token** as over loads
+Now, we get the 52 characters length of base64 string which will be used for authentication. In the personal access token method the user name can be empty for an example look at the snippets 
 
-```
+```powershell
 $Authentication = [Text.Encoding]::ASCII.GetBytes(":$Token")
-```
+# returns :<TOKENID>
 
-returns **:&lt;TOKENID&gt;**
-
-```
 $Authentication = [Text.Encoding]::ASCII.GetBytes("Chendrayan.Venkatesan@contoso.com:$Token")
+# returns Chendrayan.Venkatesan@contoso.com:<TOKENID>
 ```
-
-outputs **Chendrayan.Venkatesan@contoso.com:&lt;TOKENID&gt; **both works perfectly. 
 
 
 
