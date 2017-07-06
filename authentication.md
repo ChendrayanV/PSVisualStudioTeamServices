@@ -6,7 +6,7 @@ There are two authentication methods named OAUTH and Personal Access Token \(PAT
 
 Follow the steps beneath to create a personal access token
 
-1. Sign in to either your Visual Studio Team Services account \([https://{youraccount}.visualstudio.com\](https://{youraccount}.visualstudio.com%29\)
+1. Sign in to either your Visual Studio Team Services account [https://{youraccount}.visualstudio.com](https://{youraccount}.visualstudio.com)
 2. From your home page, open your _**profile**_. Go to your _**security**_ details.
 3. In the right pane click Personal access tokens and choose add. 
 4. Name your _**token**_ and select the _**timespan.**_
