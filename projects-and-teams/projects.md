@@ -12,9 +12,9 @@ An enthralling concept in Visual Studio Team Services is team project which are 
     GET https://{instance}/DefaultCollection/_apis/projects?api-version={version}[&stateFilter{string}&$top={integer}&skip={integer}]
 ```
 
-A very simple PowerShell script is below 
+A very simple PowerShell script is below
 
-```pwoershell
+```powershell
 # use your personal access token
 $Token = "TokenID"
 $Authentication = [Text.Encoding]::ASCII.GetBytes(":$Token")
