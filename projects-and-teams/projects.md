@@ -9,7 +9,7 @@ An enthralling concept in Visual Studio Team Services is team project which are 
 > The REST API endpoint URL is shown below and to know about the parameters navigate [here](https://www.visualstudio.com/en-us/docs/integrate/api/tfs/projects#get-a-list-of-team-projects). The API version we used here is 1.0
 
 ```C\#
-    GET https://{instance}/DefaultCollection/_apis/projects?api-version={version}[&stateFilter{string}&$top={integer}&skip={integer}]
+GET https://{instance}/DefaultCollection/_apis/projects?api-version={version}[&stateFilter{string}&$top={integer}&skip={integer}]
 ```
 
 A very simple PowerShell script is below
