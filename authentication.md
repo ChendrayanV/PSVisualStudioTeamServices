@@ -36,7 +36,7 @@ function Connect-VSTSInstance
 }
 ```
 
-Now, we get the 52 characters length of base64 string which will be used for authentication. In the personal access token method the user name can be empty for an example look at the snippets 
+Now, we get the 52 characters length of base64 string which will be used for authentication. In the personal access token method the user name can be empty for an example both snippets beneath works fine. 
 
 ```powershell
 $Authentication = [Text.Encoding]::ASCII.GetBytes(":$Token")
