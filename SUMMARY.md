@@ -1,6 +1,5 @@
 # Summary
 
 * [Introduction](README.md)
-
-## Authentication
+* [Authentication](authentication.md)
 
