@@ -7,7 +7,7 @@ schema: 2.0.0
 # Connect-VSTSInstance
 
 ## SYNOPSIS
-{{Fill in the Synopsis}}
+A PowerShell function to get authenticated over the VSTS account using the personal access token.
 
 ## SYNTAX
 
@@ -16,13 +16,13 @@ Connect-VSTSInstance -Token <String>
 ```
 
 ## DESCRIPTION
-{{Fill in the Description}}
+A PowerShell function to get authenticated over the VSTS account using the personal access token.
 
 ## EXAMPLES
 
 ### Example 1
 ```
-PS C:\> {{ Add example code here }}
+Connect-VSTSInstance -Token "<TokenID>"
 ```
 
 {{ Add example description here }}
