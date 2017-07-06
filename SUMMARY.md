@@ -5,3 +5,5 @@
 
 ## Projects and Teams
 
+* [Projects](projects-and-teams/projects.md)
+
