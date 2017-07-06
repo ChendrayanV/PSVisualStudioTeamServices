@@ -11,5 +11,24 @@ Follow the steps beneath to create a personal access token
 3. In the right pane click Personal access tokens and choose add. 
 4. Name your _**token**_ and select the _**timespan.**_
 
-The personal access token needs a conversion to base64 string and the below PowerShell script will do it. 
+The personal access token needs a conversion to base64 string and the below PowerShell script will do it.
+
+```powershell
+function Connect-VSTSInstance
+{
+    param (
+        [Parameter(Mandatory)]
+        [string]
+        $Token 
+    )
+
+    $Authentication = [Text.Encoding]::ASCII.GetBytes(":$Token")
+    $Authentication = [System.Convert]::ToBase64String($Authentication)
+    $Script:Headers = @{
+        Authorization = ("Basic {0}" -f $Authentication)
+    }  
+}
+```
+
+
 
