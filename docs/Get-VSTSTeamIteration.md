@@ -1,6 +1,6 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: 
+online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
 schema: 2.0.0
 ---
 
