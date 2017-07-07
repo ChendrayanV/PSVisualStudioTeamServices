@@ -12,9 +12,7 @@ Follow the steps beneath to create a personal access token
 4. Name your _**token**_ and select the _**time span.**_
 
 > Do not share the Personal Access Token with anyone.
->
 > Choose the time span as 90 days.
->
 > Revoke the personal access token ID if you find any security issues.
 
 The personal access token needs a conversion to base64 string and the below PowerShell script will do it.
