@@ -1,4 +1,5 @@
-function Get-VSTSWorkItem {
+function Get-VSTSWorkItem
+{
     [CmdletBinding()]
     param (
         [Parameter(Mandatory)]
@@ -9,17 +10,19 @@ function Get-VSTSWorkItem {
         $Top
     )
     
-    begin {
+    begin
+    {
     }
     
-    process {
-        if($Headers.Authorization -eq $null)
+    process
+    {
+        if ($Headers.Authorization -eq $null)
         {
             Write-Error "Access is denied!"
         }
         else 
         {
-            if($PSBoundParameters.ContainsKey('Top'))
+            if ($PSBoundParameters.ContainsKey('Top'))
             {
                 $Uri = "https://$Instance.visualstudio.com/DefaultCollection/_apis/projects?api-version=1.0&`$top=$Top"
             }
@@ -28,20 +31,23 @@ function Get-VSTSWorkItem {
                 $Uri = "https://$Instance.visualstudio.com/DefaultCollection/_apis/projects?api-version=1.0"
             }
             $RestParams = @{
-                Uri = $Uri
-                Method = "Get"
+                Uri         = $Uri
+                Method      = "Get"
                 ContentType = "application/json"
-                Headers = $Headers
+                Headers     = $Headers
             }
-            try {
+            try
+            {
                 (Invoke-RestMethod @RestParams).value 
             }
-            catch {
+            catch
+            {
                 $_.Exception.Message 
             }
         }
     }
     
-    end {
+    end
+    {
     }
 }
