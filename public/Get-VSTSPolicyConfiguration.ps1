@@ -1,4 +1,4 @@
-function Get-VSTSCodePolicyConfiguration
+function Get-VSTSPolicyConfiguration
 {
     [CmdletBinding(SupportsPaging)]
     param (
@@ -15,8 +15,17 @@ function Get-VSTSCodePolicyConfiguration
     
     process
     {
+        $Uri = "https://$Instance.visualstudio.com/defaultcollection/$Project/_apis/policy/configurations?api-version=2.0-preview.1"
+        if ($PSCmdlet.PagingParameters.First) 
+        {
+            $Uri += [string]::Concat('&`$top=', $PSCmdlet.PagingParameters.First)
+        }
+        if ($PSCmdlet.PagingParameters.Skip)
+        {
+            $Uri += [string]::Concat('&`$skip=', $PSCmdlet.PagingParameters.Skip)
+        }
         $RestParams = @{
-            Uri         = "https://$Instance.visualstudio.com/defaultcollection/$Project/_apis/policy/configurations?api-version=2.0-preview.1"
+            Uri         = $Uri
             Method      = "Get"
             ContentType = "application/json"
             Headers     = $Headers
