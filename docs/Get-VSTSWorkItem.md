@@ -1,6 +1,6 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: 
+online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
 schema: 2.0.0
 ---
 
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSWorkItem -Instance <Object> [-Top <Int32>] [<CommonParameters>]
+Get-VSTSWorkItem -Instance <Object> [-WorkItemType <Object>] [-Detailed]
 ```
 
 ## DESCRIPTION
@@ -44,11 +44,11 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Top
-{{Fill Top Description}}
+### -Detailed
+{{Fill Detailed Description}}
 
 ```yaml
-Type: Int32
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: 
 
@@ -59,8 +59,20 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
+### -WorkItemType
+{{Fill WorkItemType Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ## INPUTS
 
