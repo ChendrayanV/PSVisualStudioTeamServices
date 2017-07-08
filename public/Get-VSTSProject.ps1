@@ -1,12 +1,9 @@
 function Get-VSTSProject
 {
-    [CmdletBinding()]
+    [CmdletBinding(SupportsPaging)]
     param (
         [Parameter(Mandatory)]
-        $Instance,
-
-        [Parameter()]
-        $Top
+        $Instance
     )
     
     begin
@@ -21,13 +18,14 @@ function Get-VSTSProject
         }
         else 
         {
-            if ($PSBoundParameters.ContainsKey('Top'))
+            $Uri = "https://$Instance.visualstudio.com/defaultcollection/_apis/projects?api-version=1.0"
+            if ($PSCmdlet.PagingParameters.First) 
             {
-                $Uri = "https://$Instance.visualstudio.com/DefaultCollection/_apis/projects?`$top=$($Top)&api-version=1.0"
+                $Uri += [string]::Concat('&$top=', $PSCmdlet.PagingParameters.First)
             }
-            else 
+            if ($PSCmdlet.PagingParameters.Skip)
             {
-                $Uri = "https://$Instance.visualstudio.com/DefaultCollection/_apis/projects?api-version=1.0"
+                $Uri += [string]::Concat('&$skip=', $PSCmdlet.PagingParameters.Skip)
             }
             $RestParams = @{
                 Uri         = $Uri
@@ -37,11 +35,11 @@ function Get-VSTSProject
             }
             try 
             {
-                (Invoke-RestMethod @RestParams).value 
+                Invoke-RestMethod @RestParams 
             }
             catch 
             {
-                $_.Exception.Message 
+                $_.Exception.Message
             }
         }
     }

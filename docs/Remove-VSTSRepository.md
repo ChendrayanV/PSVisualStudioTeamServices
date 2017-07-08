@@ -1,6 +1,6 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: 
+online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
 schema: 2.0.0
 ---
 
@@ -13,7 +13,7 @@ schema: 2.0.0
 
 ```
 Remove-VSTSRepository [-Instance] <Object> [-ProjectName] <Object> [-RepositoryName] <Object>
- [[-Version] <Object>] [<CommonParameters>]
+ [[-Version] <Object>]
 ```
 
 ## DESCRIPTION
@@ -89,9 +89,6 @@ Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 

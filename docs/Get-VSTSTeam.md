@@ -1,10 +1,10 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
+online version: 
 schema: 2.0.0
 ---
 
-# New-VSTSTeam
+# Get-VSTSTeam
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-New-VSTSTeam [-Instance] <Object> [-Project] <Object> [-TeamName] <Object> [[-Description] <Object>]
+Get-VSTSTeam [-Instance] <Object> [-Project] <Object> [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>]
 ```
 
 ## DESCRIPTION
@@ -29,16 +29,31 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Description
-{{Fill Description Description}}
+### -First
+{{Fill First Description}}
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 3
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTotalCount
+{{Fill IncludeTotalCount Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -70,28 +85,29 @@ Aliases:
 Required: True
 Position: 1
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -TeamName
-{{Fill TeamName Description}}
+### -Skip
+{{Fill Skip Description}}
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 
-Required: True
-Position: 2
+Required: False
+Position: Named
 Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ## INPUTS
 
 ### System.Object
+
 
 ## OUTPUTS
 

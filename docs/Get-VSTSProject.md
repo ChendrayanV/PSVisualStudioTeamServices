@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSProject [-Instance] <Object> [[-Top] <Object>]
+Get-VSTSProject [-Instance] <Object> [-IncludeTotalCount] [-Skip <UInt64>] [-First <UInt64>]
 ```
 
 ## DESCRIPTION
@@ -44,16 +44,46 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Top
-{{Fill Top Description}}
+### -First
+{{Fill First Description}}
 
 ```yaml
-Type: Object
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: 1
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTotalCount
+{{Fill IncludeTotalCount Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Skip
+{{Fill Skip Description}}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -62,7 +92,6 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### None
-
 
 ## OUTPUTS
 
