@@ -4,7 +4,7 @@ online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/itera
 schema: 2.0.0
 ---
 
-# Get-VSTSTestConfiguration
+# New-VSTSTestConfiguration
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,8 +12,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSTestConfiguration [-Instance] <Object> [-Project] <Object> [-IncludeTotalCount] [-Skip <UInt64>]
- [-First <UInt64>]
+New-VSTSTestConfiguration [-Instance] <Object> [-Project] <Object> [-TestConfigurationName] <Object>
+ [[-TestConfigurationDescription] <Object>] [-Name] <Object> [-Value] <Object>
 ```
 
 ## DESCRIPTION
@@ -30,36 +30,6 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -First
-{{Fill First Description}}
-
-```yaml
-Type: UInt64
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -IncludeTotalCount
-{{Fill IncludeTotalCount Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Instance
 {{Fill Instance Description}}
 
@@ -72,6 +42,21 @@ Required: True
 Position: 0
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -Name
+{{Fill Name Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 4
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -90,24 +75,55 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
-### -Skip
-{{Fill Skip Description}}
+### -TestConfigurationDescription
+{{Fill TestConfigurationDescription Description}}
 
 ```yaml
-Type: UInt64
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 
 Required: False
-Position: Named
+Position: 3
 Default value: None
-Accept pipeline input: False
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -TestConfigurationName
+{{Fill TestConfigurationName Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 2
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Value
+{{Fill Value Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 5
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
 ## INPUTS
 
 ### System.Object
+
 
 ## OUTPUTS
 
