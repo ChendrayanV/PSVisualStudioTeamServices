@@ -1,10 +1,10 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
+online version: 
 schema: 2.0.0
 ---
 
-# Get-VSTSWorkItem
+# Get-VSTSCodePolicyConfiguration
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSWorkItem -Instance <Object> [-WorkItemType <Object>] [-Detailed]
+Get-VSTSCodePolicyConfiguration [-Instance] <Object> [-Project] <Object> [-IncludeTotalCount] [-Skip <UInt64>]
+ [-First <UInt64>]
 ```
 
 ## DESCRIPTION
@@ -29,6 +30,36 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
+### -First
+{{Fill First Description}}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTotalCount
+{{Fill IncludeTotalCount Description}}
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -Instance
 {{Fill Instance Description}}
 
@@ -38,32 +69,32 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: Named
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Detailed
-{{Fill Detailed Description}}
-
-```yaml
-Type: SwitchParameter
-Parameter Sets: (All)
-Aliases: 
-
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -WorkItemType
-{{Fill WorkItemType Description}}
+### -Project
+{{Fill Project Description}}
 
 ```yaml
 Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
+Accept wildcard characters: False
+```
+
+### -Skip
+{{Fill Skip Description}}
+
+```yaml
+Type: UInt64
 Parameter Sets: (All)
 Aliases: 
 
@@ -76,7 +107,8 @@ Accept wildcard characters: False
 
 ## INPUTS
 
-### None
+### System.Object
+
 
 ## OUTPUTS
 
