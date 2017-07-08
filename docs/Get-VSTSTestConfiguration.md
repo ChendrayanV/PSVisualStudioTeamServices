@@ -1,10 +1,10 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: 
+online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
 schema: 2.0.0
 ---
 
-# Get-VSTSRecycleBinWorkItem
+# Get-VSTSTestConfiguration
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,8 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSRecycleBinWorkItem [-Instance] <Object> [-Project] <Object> [-Detailed]
+Get-VSTSTestConfiguration [-Instance] <Object> [-Project] <Object> [-IncludeTotalCount] [-Skip <UInt64>]
+ [-First <UInt64>]
 ```
 
 ## DESCRIPTION
@@ -29,8 +30,23 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Detailed
-{{Fill Detailed Description}}
+### -First
+{{Fill First Description}}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -IncludeTotalCount
+{{Fill IncludeTotalCount Description}}
 
 ```yaml
 Type: SwitchParameter
@@ -39,7 +55,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: False
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -74,9 +90,25 @@ Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
+### -Skip
+{{Fill Skip Description}}
+
+```yaml
+Type: UInt64
+Parameter Sets: (All)
+Aliases: 
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ## INPUTS
 
 ### System.Object
+
 
 ## OUTPUTS
 

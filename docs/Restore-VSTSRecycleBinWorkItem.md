@@ -1,10 +1,10 @@
 ---
 external help file: PSVisualStudioTeamServices-help.xml
-online version: 
+online version: https://www.visualstudio.com/en-us/docs/integrate/api/work/iterations#get-a-teams-iterations
 schema: 2.0.0
 ---
 
-# Get-VSTSRecycleBinWorkItem
+# Restore-VSTSRecycleBinWorkItem
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSRecycleBinWorkItem [-Instance] <Object> [-Project] <Object> [-Detailed]
+Restore-VSTSRecycleBinWorkItem [-Instance] <Object> [-Id] <Object>
 ```
 
 ## DESCRIPTION
@@ -29,18 +29,18 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Detailed
-{{Fill Detailed Description}}
+### -Id
+{{Fill Id Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
 
-Required: False
-Position: Named
-Default value: False
-Accept pipeline input: False
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
 ```
 
@@ -59,24 +59,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -Project
-{{Fill Project Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: True (ByPropertyName, ByValue)
-Accept wildcard characters: False
-```
-
 ## INPUTS
 
 ### System.Object
+
 
 ## OUTPUTS
 
