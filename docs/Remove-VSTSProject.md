@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Remove-VSTSWorkItem
+# Remove-VSTSProject
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Remove-VSTSWorkItem [-Instance] <Object> [-ProjectName] <Object> [-Id] <Object> [<CommonParameters>]
+Remove-VSTSProject [-Instance] <Object> [-Id] <Object>
 ```
 
 ## DESCRIPTION
@@ -38,7 +38,7 @@ Parameter Sets: (All)
 Aliases: 
 
 Required: True
-Position: 2
+Position: 1
 Default value: None
 Accept pipeline input: True (ByPropertyName, ByValue)
 Accept wildcard characters: False
@@ -59,27 +59,10 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
-### -ProjectName
-{{Fill ProjectName Description}}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases: 
-
-Required: True
-Position: 1
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### CommonParameters
-This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see about_CommonParameters (http://go.microsoft.com/fwlink/?LinkID=113216).
-
 ## INPUTS
 
 ### System.Object
+
 
 ## OUTPUTS
 
