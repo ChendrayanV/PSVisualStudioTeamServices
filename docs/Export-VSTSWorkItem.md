@@ -4,7 +4,7 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-VSTSWorkItem
+# Export-VSTSWorkItem
 
 ## SYNOPSIS
 {{Fill in the Synopsis}}
@@ -12,7 +12,7 @@ schema: 2.0.0
 ## SYNTAX
 
 ```
-Get-VSTSWorkItem [-Instance] <Object> [[-WorkItemType] <Object>] [-Detailed]
+Export-VSTSWorkItem [-Instance] <Object> [-Token] <Object> [-WorkItemType] <Object> [[-ExportAs] <Object>]
 ```
 
 ## DESCRIPTION
@@ -29,17 +29,18 @@ PS C:\> {{ Add example code here }}
 
 ## PARAMETERS
 
-### -Detailed
-{{Fill Detailed Description}}
+### -ExportAs
+{{Fill ExportAs Description}}
 
 ```yaml
-Type: SwitchParameter
+Type: Object
 Parameter Sets: (All)
 Aliases: 
+Accepted values: Csv, HTML, FancyHTML
 
 Required: False
-Position: Named
-Default value: False
+Position: 3
+Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -59,6 +60,21 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -Token
+{{Fill Token Description}}
+
+```yaml
+Type: Object
+Parameter Sets: (All)
+Aliases: 
+
+Required: True
+Position: 1
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -WorkItemType
 {{Fill WorkItemType Description}}
 
@@ -66,10 +82,10 @@ Accept wildcard characters: False
 Type: Object
 Parameter Sets: (All)
 Aliases: 
-Accepted values: Task, Bug, Product Backlog Item, Code Review Request, Code Review Response, Feature
+Accepted values: Bug, Task, Epic, Feature
 
-Required: False
-Position: 1
+Required: True
+Position: 2
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -78,6 +94,7 @@ Accept wildcard characters: False
 ## INPUTS
 
 ### None
+
 
 ## OUTPUTS
 
